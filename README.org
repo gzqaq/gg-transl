@@ -1,0 +1,52 @@
+#+title: gg-transl
+#+author: Ziqin Gong
+
+* Usage
+#+begin_src
+Quick translation using Google Cloud Translation API
+
+Usage: gg-transl [OPTIONS] [CONTENTS]...
+
+Arguments:
+  [CONTENTS]...
+	  Content to be translated
+
+Options:
+  -s, --src-lang <SRC_LANG>
+	  Source language code. Default: en
+
+  -t, --tgt-lang <TGT_LANG>
+	  Target language code. Default: zh
+
+  -p, --project-id <PROJECT_ID>
+	  Google Cloud project ID. Can be passed via `GCLOUD_PROJECT_ID`.
+
+	  Must have enabled the Translation API.
+
+  -h, --help
+	  Print help (see a summary with '-h')
+
+  -V, --version
+	  Print version
+#+end_src
+
+Note that the project whose ID will be passed via ~--project-id~ or ~GCLOUD_PROJECT_ID~ must have
+enabled the Translation API.
+
+* Installation
+** Requirements
+Rust (~cargo~).
+
+** Building
+#+begin_src shell
+cargo build --release
+#+end_src
+
+A built executable ~gg-transl~ can be found in ~target/release/~.
+
+** Installation
+#+begin_src shell
+cargo install --path . --locked
+#+end_src
+
+This will install ~gg-transl~ into ~cargo~'s bin folder (~$HOME/.cargo/bin~ by default).
