@@ -13,6 +13,7 @@ fn number_each_item(item: (usize, &String)) -> String {
 
 #[derive(Parser, Debug)]
 #[command(version)]
+/// Quick translation using Google Cloud Translation API.
 pub struct Args {
     /// Content to be translated.
     contents: Vec<String>,
