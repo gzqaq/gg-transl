@@ -1,7 +1,7 @@
 #+title: gg-transl
 #+author: Ziqin Gong
 
-* Usage
+** Usage
 #+begin_src
 Quick translation using Google Cloud Translation API
 
@@ -33,18 +33,18 @@ Options:
 Note that the project whose ID will be passed via ~--project-id~ or ~GCLOUD_PROJECT_ID~ must have
 enabled the Translation API.
 
-* Installation
-** Requirements
+** Installation
+*** Requirements
 Rust (~cargo~).
 
-** Building
+*** Building
 #+begin_src shell
 cargo build --release
 #+end_src
 
 A built executable ~gg-transl~ can be found in ~target/release/~.
 
-** Installation
+*** Installation
 #+begin_src shell
 cargo install --path . --locked
 #+end_src
